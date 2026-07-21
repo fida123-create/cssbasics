@@ -1,0 +1,100 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f4f4f9;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav{
+    padding: 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+nav ul li a:hover{
+    color: blue;
+}
+
+main{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section{
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+p{
+    line-height: 1.6;
+}
+
+#about{
+    background-color: white;
+    border-left: 8px solid orange;
+    padding: 20px;
+}
+
+.data-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td{
+    padding: 10px;
+}
+
+.data-table th{
+    background-color: #ddd;
+}
+
+.data-table td{
+    border-bottom: 1px solid #ccc;
+}
+
+.form-container{
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+input[type="text"],
+select{
+    width: 100%;
+    padding: 10px;
+}
+
+input[type="text"]:focus,
+select:focus{
+    outline: 2px solid blue;
+}
+
+#submit-btn{
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#submit-btn:hover{
+    background-color: #1d4ed8;
+}
