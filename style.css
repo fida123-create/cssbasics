@@ -1,132 +1,329 @@
 
-*{
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: #f4f4f9;
-    color: #333;
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-header{
-    background-color: #1e293b;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-nav{
-    padding: 15px;
-}
-nav ul {
-    display: flex;
-    justify-content: center; /* or space-around */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
-}
-
-nav ul li a{
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
-}
-
-nav ul li a:hover{
-    color: blue;
-}
-
-main{
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-section{
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-p{
+    background-color: #f4f7fa;
+    color: #333;
     line-height: 1.6;
 }
 
-#about{
-    background-color: white;
-    border-left: 8px solid orange;
-    padding: 20px;
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+    background: #3d4149;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
 }
 
-.data-table{
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+nav {
+    background: #0f172a;
+    padding: 15px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+
+/* =========================================
+   TASK 1 - TOGGLE THEME BUTTON
+   ========================================= */
+
+#themeToggle {
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#themeToggle:hover {
+    background: #7dd3fc;
+}
+
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+
+/* =========================================
+   SECTIONS
+   ========================================= */
+
+section {
+    background: white;
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   TABLE
+   ========================================= */
+
+.data-table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 15px;
 }
 
 .data-table th,
-.data-table td{
-    padding: 10px;
-}
-
-.data-table th{
-    background-color: #ddd;
-}
-
-.data-table td{
-    border-bottom: 1px solid #ccc;
-}
-
-.form-container{
-    background-color: white;
+.data-table td {
     border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
+    padding: 12px;
+    text-align: left;
 }
+
+.data-table th {
+    background: #2563eb;
+    color: white;
+}
+
+.data-table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.data-table tr:hover {
+    background: #dbeafe;
+}
+
+
+/* =========================================
+   FORM
+   ========================================= */
+
+.form-container {
+    max-width: 600px;
+    margin: auto;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    margin-bottom: 15px;
 }
 
-input[type="text"],
-select{
-    width: 100%;
-    padding: 10px;
-}
-
-input[type="text"]:focus,
-select:focus{
-    outline: 2px solid blue;
-}
-
-#submit-btn{
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
     font-weight: bold;
 }
 
-#submit-btn:hover{
-    background-color: #1d4ed8;
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 16px;
 }
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+   ========================================= */
+
+#submit-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#submit-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   TASK 1 - DARK THEME
+   ========================================= */
+
+/* These styles are activated by JavaScript */
+
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+body.dark-theme section {
+    background-color: #2d2d2d;
+    color: white;
+}
+
+body.dark-theme section h2 {
+    color: #7dd3fc;
+}
+
+body.dark-theme section p {
+    color: white;
+}
+
+body.dark-theme .data-table td {
+    color: white;
+    background-color: #333;
+    border-color: #555;
+}
+
+body.dark-theme .data-table tr:nth-child(even) {
+    background-color: #3a3a3a;
+}
+
+body.dark-theme .data-table tr:hover {
+    background-color: #444;
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group select {
+    background-color: #333;
+    color: white;
+    border-color: #666;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
 @media (max-width: 768px) {
 
-    /* Stack navigation links vertically */
     nav ul {
         flex-direction: column;
+        gap: 15px;
         align-items: center;
     }
 
-    /* Make containers use more screen space */
-    main,
-    .form-container {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
         width: 95%;
     }
 
-    /* Enable horizontal scrolling for wide tables */
     .data-table {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================
+   ADDITIONAL RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* Navigation: stack links vertically */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Container Widths */
+    main {
+        width: 95%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .form-container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    /* Tables: horizontal scrolling */
+    .data-table {
+        display: block;
         overflow-x: auto;
+        white-space: nowrap;
     }
 }
